@@ -12,7 +12,7 @@ export default function Home()
 
     let fetchMovies = async (query) =>{
      SetLoading(true);
-     let result = await fetch(`http://www.omdbapi.com/?apikey=9cb6f975&s=${query}`)
+     let result = await fetch(`https://www.omdbapi.com/?apikey=9cb6f975&s=${query}`)
      let data = await result.json();
      console.log(data);
      SetMovies(data.Search || [])
